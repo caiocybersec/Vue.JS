@@ -1,0 +1,23 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+
+  <div id="app" >
+      <p>{{ title }}</p>
+      <p>{{ saudacao() }}</p> <!-- Uso do double mustache para acessar componentes do vue-->
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app', // acessando nosso elemento pelo id
+      data: {
+        title: 'Usando VueJS!',
+        goodweek: 'Boa semana!'
+      },
+      methods: {
+        saudacao(){
+          return `${this.title} ${this.goodweek}`
+        }
+      }
+
+    })
+  </script>

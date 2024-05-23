@@ -1,0 +1,24 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+
+  <div id="app" >
+      <p>{{ title }}</p>
+      <p>{{ saudacao() }}</p>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        title: 'Usando VueJS!',
+        goodweek: 'Boa semana!'
+      },
+      methods: {
+        saudacao(){
+          console.log(this) //para acessar uma variável ou um método, usamos o 'this'
+          return `${this.title} ${this.goodweek}`
+        }
+      }
+
+    })
+  </script>
