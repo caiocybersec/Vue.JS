@@ -38,6 +38,7 @@ new Vue ({
     heal(min, max) {
       const heal = this.getRandom(min, max)
       this.playerLife = Math.min(this.playerLife + heal, 100)
+      this.registerLog(`Jogador ganhou ${ heal } de vida.`)
     },
 
     healAndHurt() {
